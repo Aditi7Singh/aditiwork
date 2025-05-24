@@ -27,43 +27,45 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <p className="text-sm font-medium text-gray-500 tracking-wider uppercase">About</p>
+              <h2 className="text-3xl md:text-4xl font-light text-gray-900">
+                Passionate Developer with a Vision
+              </h2>
+              <div className="w-12 h-px bg-gray-900"></div>
+            </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-              Passionate Developer with a Vision
-            </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              I'm a dedicated software developer with a strong foundation in computer science and a passion for creating 
-              innovative solutions. My journey in technology started with curiosity and has evolved into a commitment 
-              to building applications that make a difference.
-            </p>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Currently pursuing my studies while actively working on various projects, I believe in the power of 
-              technology to solve real-world problems. I'm always eager to learn new technologies and collaborate 
-              with like-minded individuals to create something amazing.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              When I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, 
-              or brainstorming ideas for my next big project.
-            </p>
+            <div className="space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                I'm a dedicated software developer with a strong foundation in computer science and a passion for creating 
+                innovative solutions. My journey in technology started with curiosity and has evolved into a commitment 
+                to building applications that make a difference.
+              </p>
+              <p>
+                Currently pursuing my studies while actively working on various projects, I believe in the power of 
+                technology to solve real-world problems. I'm always eager to learn new technologies and collaborate 
+                with like-minded individuals to create something amazing.
+              </p>
+              <p>
+                When I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, 
+                or brainstorming ideas for my next big project.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-6 h-6 text-blue-600" />
+              <Card key={index} className="border-0 shadow-none bg-white hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-gray-600" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <h4 className="font-medium text-gray-900 mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
