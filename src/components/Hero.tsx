@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -8,8 +8,12 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-            <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-              <span className="text-4xl font-bold text-gray-800">AS</span>
+            <div className="w-full h-full rounded-full overflow-hidden">
+              <img 
+                src="/lovable-uploads/d1a4de89-2cf0-4e99-8320-a5e5d428e7da.png" 
+                alt="Aditi Singh"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
@@ -42,7 +46,13 @@ const Hero = () => {
             </a>
           </Button>
           <Button asChild variant="outline" className="border-2 hover:bg-purple-50">
-            <a href="#contact">
+            <a href="https://x.com/AditiSingh38187" target="_blank" rel="noopener noreferrer">
+              <Twitter className="w-4 h-4 mr-2" />
+              Twitter
+            </a>
+          </Button>
+          <Button asChild variant="outline" className="border-2 hover:bg-red-50">
+            <a href="mailto:aditisakshisingh@gmail.com">
               <Mail className="w-4 h-4 mr-2" />
               Contact Me
             </a>
